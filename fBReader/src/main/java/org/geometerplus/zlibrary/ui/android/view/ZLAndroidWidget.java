@@ -19,15 +19,19 @@
 
 package org.geometerplus.zlibrary.ui.android.view;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+
+import com.leon.myreader.activity.PopDialog;
 
 import org.geometerplus.android.fbreader.FBReader;
 import org.geometerplus.fbreader.Paths;
@@ -54,22 +58,35 @@ public class ZLAndroidWidget extends MainView implements ZLViewWidget, View.OnLo
     private final BitmapManagerImpl myBitmapManager = new BitmapManagerImpl(this);
     private Bitmap myFooterBitmap;
     private final SystemInfo mySystemInfo;
+    private Context mCntext;
+    private Activity mActivity;
+
+    public void setmActivity(Activity mActivity) {
+        this.mActivity = mActivity;
+    }
+
+    public Activity getmActivity() {
+        return mActivity;
+    }
 
     public ZLAndroidWidget(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mySystemInfo = Paths.systemInfo(context);
+        mCntext = context;
         init();
     }
 
     public ZLAndroidWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
         mySystemInfo = Paths.systemInfo(context);
+        mCntext = context;
         init();
     }
 
     public ZLAndroidWidget(Context context) {
         super(context);
         mySystemInfo = Paths.systemInfo(context);
+        mCntext = context;
         init();
     }
 
@@ -427,6 +444,8 @@ public class ZLAndroidWidget extends MainView implements ZLViewWidget, View.OnLo
                 myScreenIsTouched = false;
                 break;
             case MotionEvent.ACTION_DOWN:
+                Log.i("LEONLEONLEON", "danji l ");
+                PopDialog.showPopwindow(mCntext, this.getmActivity(), "dd", "dd");
                 if (myPendingShortClickRunnable != null) {
                     removeCallbacks(myPendingShortClickRunnable);
                     myPendingShortClickRunnable = null;

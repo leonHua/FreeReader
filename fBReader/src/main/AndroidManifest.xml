@@ -687,9 +687,9 @@
             android:exported="false"
             android:theme="@style/FBReader.Dialog"/>
         <activity
+            android:theme="@style/FBReader.Activity.NoActionBar"
             android:name="com.leon.myreader.activity.MainActivity"
-            android:launchMode="singleTask"
-            android:theme="@style/FBReader.Activity">
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

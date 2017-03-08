@@ -16,12 +16,6 @@
         android:scrollbars="vertical"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="第88章　成了"
-        android:textColor="#999999"/>
-
     <Button
         android:id="@+id/btn1"
         android:layout_width="match_parent"
@@ -64,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:text="88.88%"
-            android:textColor="#999999"/>
+            android:textColor="#999999"
+            android:textSize="12sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,7 +67,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
             android:text="12:00"
-            android:textColor="#999999"/>
+            android:textColor="#999999"
+            android:textSize="12sp"/>
     </RelativeLayout>
 
 </RelativeLayout>

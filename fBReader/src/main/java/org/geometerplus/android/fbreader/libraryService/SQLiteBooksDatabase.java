@@ -19,32 +19,50 @@
 
 package org.geometerplus.android.fbreader.libraryService;
 
-import java.util.*;
-import java.math.BigDecimal;
-
 import android.content.Context;
-import android.database.sqlite.*;
-import android.database.SQLException;
 import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDoneException;
+import android.database.sqlite.SQLiteStatement;
 
-import org.geometerplus.zlibrary.core.options.Config;
+import org.geometerplus.android.util.SQLiteUtil;
+import org.geometerplus.fbreader.book.Author;
+import org.geometerplus.fbreader.book.Bookmark;
+import org.geometerplus.fbreader.book.BookmarkQuery;
+import org.geometerplus.fbreader.book.BooksDatabase;
+import org.geometerplus.fbreader.book.DbBook;
+import org.geometerplus.fbreader.book.FileInfo;
+import org.geometerplus.fbreader.book.FileInfoSet;
+import org.geometerplus.fbreader.book.HighlightingStyle;
+import org.geometerplus.fbreader.book.Label;
+import org.geometerplus.fbreader.book.SeriesInfo;
+import org.geometerplus.fbreader.book.Tag;
+import org.geometerplus.fbreader.book.UID;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
+import org.geometerplus.zlibrary.core.options.Config;
 import org.geometerplus.zlibrary.core.options.ZLIntegerOption;
 import org.geometerplus.zlibrary.core.util.RationalNumber;
 import org.geometerplus.zlibrary.core.util.ZLColor;
-import org.geometerplus.zlibrary.text.view.ZLTextPosition;
 import org.geometerplus.zlibrary.text.view.ZLTextFixedPosition;
+import org.geometerplus.zlibrary.text.view.ZLTextPosition;
 
-import org.geometerplus.fbreader.book.*;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeSet;
+import java.util.UUID;
 
-import org.geometerplus.android.util.SQLiteUtil;
-
-final class SQLiteBooksDatabase extends BooksDatabase {
+public final class SQLiteBooksDatabase extends BooksDatabase {
 	private final SQLiteDatabase myDatabase;
 	private final HashMap<String,SQLiteStatement> myStatements =
 		new HashMap<String,SQLiteStatement>();
 
-	SQLiteBooksDatabase(Context context) {
+	public SQLiteBooksDatabase(Context context) {
 		myDatabase = context.openOrCreateDatabase("books.db", Context.MODE_PRIVATE, null);
 		migrate();
 	}

@@ -99,10 +99,10 @@ public final class FBView extends ZLTextView {
 	private void onFingerSingleTapLastResort(int x, int y) {
 		Log.i("LEOLEONLEON","DIANJI...");
 		//LEON去掉点击屏幕显示菜单设置
-		myReader.runAction(getZoneMap().getActionByCoordinates(
-				x, y, getContextWidth(), getContextHeight(),
-				isDoubleTapSupported() ? TapZoneMap.Tap.singleNotDoubleTap : TapZoneMap.Tap.singleTap
-		), x, y);
+		//myReader.runAction(getZoneMap().getActionByCoordinates(
+		//		x, y, getContextWidth(), getContextHeight(),
+		//		isDoubleTapSupported() ? TapZoneMap.Tap.singleNotDoubleTap : TapZoneMap.Tap.singleTap
+		//), x, y);
 	}
 
 	@Override
