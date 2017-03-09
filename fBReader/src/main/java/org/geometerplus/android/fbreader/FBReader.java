@@ -34,7 +34,6 @@ import android.os.PowerManager;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
@@ -1072,19 +1071,6 @@ public final class FBReader extends FBReaderMainActivity implements ZLApplicatio
         myFBReaderApp.getTextView().removeHighlightings(DictionaryHighlighting.class);
         myFBReaderApp.getViewWidget().reset();
         myFBReaderApp.getViewWidget().repaint();
-    }
-
-    public void qiehuan(View view) {
-        myFBReaderApp.runAction("night");
-    }
-    public void big(View view) {
-        myFBReaderApp.runAction(ActionCode.INCREASE_FONT);
-    }
-    public void small(View view) {
-        myFBReaderApp.runAction(ActionCode.DECREASE_FONT);
-    }
-    public void bookMark(View view) {
-        //myFBReaderApp.runAction(ActionCode.DECREASE_FONT);
     }
 
 }

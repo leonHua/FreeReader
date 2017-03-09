@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
                 convertView.setTag(viewHolder);
             }
             viewHolder = (MyViewHolder) convertView.getTag();
-            viewHolder.tvName.setText(mBookLists.get(position));
+            //viewHolder.tvName.setText(mBookLists.get(position));
             return convertView;
         }
     }

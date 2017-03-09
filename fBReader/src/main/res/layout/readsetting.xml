@@ -1,41 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    android:padding="10dp">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#55000000"
+              android:orientation="vertical"
+              android:padding="10dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="gegnxi"
-        android:textColor="@color/primary"
-        android:textSize="22sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_margin="10dp"
-        android:background="#cccccc" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_cancel"
+        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/white" />
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/mulu"
+            android:gravity="center"
+            android:text="目录/书签"/>
 
-        <Button
-            android:id="@+id/btn_update"
+        <TextView
+            android:id="@+id/tv_dayandnight"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/white" />
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/xianshi"
+            android:gravity="center"
+            android:text="显示"/>
+
+        <TextView
+            android:id="@+id/tv_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/ziti"
+            android:gravity="center"
+            android:text="选项"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/shezhi"
+            android:gravity="center"
+            android:text="其他"/>
     </LinearLayout>
+
+
 </LinearLayout>

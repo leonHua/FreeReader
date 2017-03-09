@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#55000000"
+              android:orientation="vertical"
+              android:padding="16dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_decrease"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/btnbg_font"
+            android:clickable="true"
+            android:text="A-"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/tv_fontsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="54"
+            android:textColor="@color/primary"
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/btn_increase"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/btnbg_font"
+            android:clickable="true"
+            android:text="A+"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp">
+
+        <Button
+            android:id="@+id/btn_slide"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/btnbg_font"
+            android:clickable="true"
+            android:text="覆盖"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_shift"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/btnbg_font"
+            android:clickable="true"
+            android:text="平滑"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_curl"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/btnbg_font"
+            android:clickable="true"
+            android:text="仿真"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

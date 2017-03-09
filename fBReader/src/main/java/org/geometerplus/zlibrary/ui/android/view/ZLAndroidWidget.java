@@ -40,6 +40,7 @@ import org.geometerplus.zlibrary.core.application.ZLKeyBindings;
 import org.geometerplus.zlibrary.core.util.SystemInfo;
 import org.geometerplus.zlibrary.core.view.ZLView;
 import org.geometerplus.zlibrary.core.view.ZLViewWidget;
+import org.geometerplus.zlibrary.ui.android.R;
 import org.geometerplus.zlibrary.ui.android.view.animation.AnimationProvider;
 import org.geometerplus.zlibrary.ui.android.view.animation.CurlAnimationProvider;
 import org.geometerplus.zlibrary.ui.android.view.animation.NoneAnimationProvider;
@@ -417,6 +418,10 @@ public class ZLAndroidWidget extends MainView implements ZLViewWidget, View.OnLo
                 view.onFingerEventCancelled();
                 break;
             case MotionEvent.ACTION_UP:
+                Log.i("LEONLEONLEON", "danji l ");
+                if (myPressedX == x && myPressedY == y) {
+                    PopDialog.showPopwindow(mCntext, this.getmActivity(), R.layout.readsetting);
+                }
                 if (myPendingDoubleTap) {
                     view.onFingerDoubleTap(x, y);
                 } else if (myLongClickPerformed) {
@@ -444,8 +449,6 @@ public class ZLAndroidWidget extends MainView implements ZLViewWidget, View.OnLo
                 myScreenIsTouched = false;
                 break;
             case MotionEvent.ACTION_DOWN:
-                Log.i("LEONLEONLEON", "danji l ");
-                PopDialog.showPopwindow(mCntext, this.getmActivity(), "dd", "dd");
                 if (myPendingShortClickRunnable != null) {
                     removeCallbacks(myPendingShortClickRunnable);
                     myPendingShortClickRunnable = null;

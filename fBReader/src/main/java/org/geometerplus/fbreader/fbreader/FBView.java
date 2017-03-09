@@ -19,8 +19,6 @@
 
 package org.geometerplus.fbreader.fbreader;
 
-import android.util.Log;
-
 import org.geometerplus.fbreader.bookmodel.BookModel;
 import org.geometerplus.fbreader.bookmodel.FBHyperlinkType;
 import org.geometerplus.fbreader.bookmodel.TOCTree;
@@ -97,7 +95,6 @@ public final class FBView extends ZLTextView {
 	}
 
 	private void onFingerSingleTapLastResort(int x, int y) {
-		Log.i("LEOLEONLEON","DIANJI...");
 		//LEON去掉点击屏幕显示菜单设置
 		//myReader.runAction(getZoneMap().getActionByCoordinates(
 		//		x, y, getContextWidth(), getContextHeight(),
