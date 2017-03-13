@@ -1,4 +1,4 @@
-include ':ambilWarna', ':myreader'
+include ':ambilWarna'
 include ':superToasts'
 include ':code'
 include ':library'
